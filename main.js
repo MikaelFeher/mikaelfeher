@@ -35,10 +35,10 @@ $(document).ready(function () {
 
         switch($(this).attr('name')) {
             case 'github':
-                window.location = 'https://github.com/MikaelFeher';
+                window.open('https://github.com/MikaelFeher', '_blank');
                 break;
             case 'linkedin':
-                window.location = 'https://www.linkedin.com/in/mikael-feher-79b324105';
+                window.open('https://www.linkedin.com/in/mikael-feher-79b324105', '_blank');
                 break;
             case 'email':
                 window.location = 'mailto: mikael.feher@gmail.com?subject=Hej, jag klickade på email-länken på din sida';
