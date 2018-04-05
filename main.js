@@ -1,48 +1,39 @@
+const homeLink = document.getElementById('home_link');
+const projectLink = document.getElementById('project_link');
+const contactLink = document.getElementById('contact_link');
+const main = document.getElementById('main');
+const project = document.getElementById('project');
+const contact = document.getElementById('contact');
 
-$(document).ready(function () {
+/* HOME LINK */
+homeLink.addEventListener('click', () => {
+    main.classList.remove('hidden');
+    project.classList.add('hidden');
+    contact.classList.add('hidden');
 
-    $('.nav_list_item').on('click', function () {
-        if ($(this).attr('id') === 'contact_link') {
-            $(this).addClass('active_link')
-            $('#contact').show();
-            $('#project').hide();
-            $('#project_link').removeClass('active_link');
-            $('#main').hide()
-            $('#home_link').removeClass('active_link');
-        } else if ($(this).attr('id') === 'project_link') {
-            $(this).addClass('active_link');
-            $('#project').show();
-            $('#contact').hide();
-            $('#contact_link').removeClass('active_link');
-            $('#main').hide()
-            $('#home_link').removeClass('active_link');
-        } else {
-            $('home_link').addClass('active_link');
-            $('#main').show();
-            $('#contact').hide();
-            $('#contact_link').removeClass('active_link');
-            $('#project').hide()
-            $('#project_link').removeClass('active_link');
-        }
-    });
+    homeLink.classList.add('active_link');
+    projectLink.classList.remove('active_link');
+    contactLink.classList.remove('active_link');
+})
 
-    $('.contact_item').on('click', function() {
-        // if($(this).attr('name') === 'github') {
-        //     console.log("Github");
-        //     window.location = 'https://github.com/MikaelFeher';
-        //     window.location = 'https://www.linkedin.com/in/mikael-feher-79b324105';
-        // }
+/* PROJECT LINK */
+projectLink.addEventListener('click', () => {
+    project.classList.remove('hidden');
+    main.classList.add('hidden');
+    contact.classList.add('hidden');
 
-        switch($(this).attr('name')) {
-            case 'github':
-                window.open('https://github.com/MikaelFeher', '_blank');
-                break;
-            case 'linkedin':
-                window.open('https://www.linkedin.com/in/mikael-feher-79b324105', '_blank');
-                break;
-            case 'email':
-                window.location = 'mailto: mikael.feher@gmail.com?subject=Hej, jag klickade på email-länken på din sida';
-                break;
-        }       
-    })
-});
+    projectLink.classList.add('active_link');
+    homeLink.classList.remove('active_link');
+    contactLink.classList.remove('active_link');
+})
+
+/* CONTACT LINK */
+contactLink.addEventListener('click', () => {
+    contact.classList.remove('hidden');
+    main.classList.add('hidden');
+    project.classList.add('hidden');
+
+    contactLink.classList.add('active_link');
+    homeLink.classList.remove('active_link');
+    projectLink.classList.remove('active_link');
+})
