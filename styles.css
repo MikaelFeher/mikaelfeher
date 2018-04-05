@@ -112,6 +112,15 @@ hr {
     width: 100%;
 }
 
+#project_header p {
+    margin: 1%;
+}
+
+#project_header a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 #project_item_container {
     width: 100%;
     margin: auto;
@@ -124,6 +133,7 @@ hr {
 
 .project_item_logo {
     width: 100px;
+    height: 100px;
     margin: 3%;
 }
 
@@ -133,6 +143,7 @@ hr {
 
 .project_item_description {
     padding: 2%;
+    line-height: 1.2em;
 }
 
 .contact_item {
