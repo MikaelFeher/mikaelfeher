@@ -109,6 +109,10 @@ hr {
     margin-bottom: 2%;
 }
 
+#main_right p a {
+    text-decoration: underline;
+}
+
 #profile_pic {
     height: 400px;
     border-radius: 3%;
